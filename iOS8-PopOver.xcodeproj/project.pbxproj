@@ -161,9 +161,13 @@
 				TargetAttributes = {
 					3C7AAC7519C4CDA80058A42F = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = Z33RQ32T74;
+						LastSwiftMigration = 0830;
 					};
 					3C7AAC8A19C4CDA80058A42F = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = Z33RQ32T74;
+						LastSwiftMigration = 0830;
 						TestTargetID = 3C7AAC7519C4CDA80058A42F;
 					};
 				};
@@ -330,9 +334,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Z33RQ32T74;
 				INFOPLIST_FILE = "iOS8-PopOver/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -340,9 +346,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Z33RQ32T74;
 				INFOPLIST_FILE = "iOS8-PopOver/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -350,6 +358,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = Z33RQ32T74;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -361,6 +370,7 @@
 				INFOPLIST_FILE = "iOS8-PopOverTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS8-PopOver.app/iOS8-PopOver";
 			};
 			name = Debug;
@@ -369,6 +379,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = Z33RQ32T74;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -376,6 +387,7 @@
 				INFOPLIST_FILE = "iOS8-PopOverTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS8-PopOver.app/iOS8-PopOver";
 			};
 			name = Release;
@@ -399,6 +411,7 @@
 				3C7AAC9719C4CDA80058A42F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C7AAC9819C4CDA80058A42F /* Build configuration list for PBXNativeTarget "iOS8-PopOverTests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +420,7 @@
 				3C7AAC9A19C4CDA80058A42F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

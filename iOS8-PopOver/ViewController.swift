@@ -10,14 +10,16 @@ import UIKit
 
 class ViewController: UIViewController, UIPopoverPresentationControllerDelegate
 {
-    func showPopover(base: UIView, text: String)
+    func showPopover(_ base: UIView, text: String, width: CGFloat, height: CGFloat)
     {
-        if let viewController = self.storyboard?.instantiateViewControllerWithIdentifier("popover") as? PopOverViewController {
+        if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "popover") as? PopOverViewController {
             
             viewController.text = text
+            viewController.width = width
+            viewController.height = height
             
             let navController = UINavigationController(rootViewController: viewController)
-            navController.modalPresentationStyle = .Popover
+            navController.modalPresentationStyle = .popover
             
             if let pctrl = navController.popoverPresentationController {
                 pctrl.delegate = self
@@ -25,7 +27,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate
                 pctrl.sourceView = base
                 pctrl.sourceRect = base.bounds
                 
-                self.presentViewController(navController, animated: true, completion: nil)
+                self.present(navController, animated: true, completion: nil)
             }
         }
     }
@@ -34,13 +36,18 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate
         super.viewDidLoad()
     }
     
-    @IBAction func onShow(sender: UIButton)
+    @IBAction func onShow(_ sender: UIButton)
     {
-        self.showPopover(sender, text: "Hello World :)")
+        self.showPopover(sender, text: "Hello World :)", width: 300, height: 200)
     }
     
-    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
-        return .None
+    @IBAction func onShow1(_ sender: UIButton)
+    {
+        self.showPopover(sender, text: "Hello World :)", width: self.view.frame.width - 45, height:  self.view.frame.height - 197)
+    }
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
     }
 }
 

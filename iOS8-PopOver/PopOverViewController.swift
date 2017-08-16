@@ -11,19 +11,21 @@ import UIKit
 class PopOverViewController: UIViewController {
 
     var text: String = "undefined"
+    var width: CGFloat!
+    var height: CGFloat!
     
-    @IBOutlet private var mainLabel: UILabel?
+    @IBOutlet fileprivate var mainLabel: UILabel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.preferredContentSize = CGSizeMake(200, 200)
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "dismiss:")
+        self.preferredContentSize = CGSize(width: width, height: height)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(PopOverViewController.dismiss(_:)))
         
         mainLabel?.text = self.text
     }
     
-    func dismiss(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    func dismiss(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
